@@ -29,6 +29,7 @@ li{
     float:left;
     padding: 33px 40px;
     flex-direction: row;
+    list-style: none;
 }
 
 .header-list a{
@@ -119,6 +120,7 @@ li{
     float: right;
     font-size: 20px;
     padding: 0px 20px;
+    list-style: none;
 }
 .footer-list a{
     padding: 33px 20px;
