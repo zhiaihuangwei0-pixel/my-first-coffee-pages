@@ -28,12 +28,14 @@ li{
 .header-list li{
     float:left;
     padding: 33px 40px;
+    flex-direction: row;
 }
 
 .header-list a{
     color: white;
     font-size: 20px;
     text-decoration: none;
+    flex-direction: row;
 }
 
 .main{
@@ -79,28 +81,38 @@ li{
 }
 
 .contents-item img{
-    display: flex;
     box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);
     border-radius: 10px;
 }
 .footer{
     background-color: black;
-    color:aliceblue;
-    padding: 40px;
-    
+    color: white;
+    height: 90px;
+    min-width: 1000px;
 }
 
 .footer-logo{
     font-size: 36px;
     float:left;
+    padding:23px 40px 15px 40px;
 }
 
 .footer-list li{
-    float:right;
+    padding: 33px 20px;
+    float: right;
+    font-size: 20px;
     padding: 0px 20px;
 }
 .footer-list a{
+    padding: 33px 20px;
+    float: right;
     color: aliceblue;
     font-size: 20px;
     text-decoration: none;
+}
+
+.main-img{
+    position: fixed;
+    top: 350px;
+    left: 1200px;
 }
