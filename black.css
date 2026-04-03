@@ -37,6 +37,13 @@ li{
 .main{
     padding:100px 80px;
 }
+
+.main-img{
+    position: fixed;
+    top: 350px;
+    left: 1200px;
+}
+
 .copy-container h1{
     font-size: 100px;
     font-weight: normal;
