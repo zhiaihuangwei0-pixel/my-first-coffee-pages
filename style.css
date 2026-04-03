@@ -51,7 +51,7 @@ li{
 .copy-container h1{
     font-size: 100px;
     box-sizing: border-box;
-    font-size: 10vm;
+    min-width: 1000px;
 }
 
 .copy-container h2{
