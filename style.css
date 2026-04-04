@@ -1,6 +1,9 @@
 body{
     font-family: 'Courier New', Courier, monospace;
     min-width: 100%;
+    overflow-x: hidden; /* 画面からはみ出した要素を強制的に隠す */
+    margin: 0;
+    padding: 0;
 }
 
 li{
@@ -11,9 +14,8 @@ li{
     background-color:rgba(165, 101, 42, 0.651);
     color: black;
     height: 90px;
-    max-width: 100%;
+    width: 100%;
 }
-
 .header-logo{
     float:left;
     font-size:36px;
@@ -51,7 +53,7 @@ li{
 .copy-container h1{
     font-size: 100px;
     box-sizing: border-box;
-    max-width: 100%;
+    max-width: 90%;
 }
 
 .copy-container h2{
@@ -72,11 +74,16 @@ li{
 }
 
 .contents{
-    display: flex;
-    gap: 80px;
+  display: flex;
+  gap: 20px;            /* スマホでは80pxだと広すぎるので、少し詰めると綺麗です */
+  overflow-x: auto;     /* 横方向にはみ出した場合、スクロールできるようにする */
+  white-space: nowrap;  /* 中身を絶対に改行させない */
+  -webkit-overflow-scrolling: touch; /* iPhoneでスルスル動くようにする */
+  padding-bottom: 20px; /* スクロールバーで文字が隠れないように少し余白を */
 }
 
 .contents-item{
+    flex-shrink: 0; /* これを追加！画面が狭くても200pxを維持します */
     display: flex;
     flex-direction: column;
     gap: 20px;
@@ -102,10 +109,10 @@ li{
 }
 
 .footer{
+    width: 100%;
     background-color: black;
     color: white;
     height: 90px;
-    min-width: 1200px;
 }
 
 .footer-logo{
@@ -126,4 +133,37 @@ li{
     color: aliceblue;
     font-size: 20px;
     text-decoration: none;
+}
+
+@media (max-width: 768px) {
+    .header-logo {
+        font-size: 28px;
+        padding: 20px 30px;
+    }
+    .header-list a {
+        font-size: 16px;
+        padding: 20px 30px;
+    }
+    .main {
+        padding: 40px 20px;
+    }
+    .copy-container h1 {
+        font-size: 8vw;
+    }
+    .copy-container h2 {
+        font-size: 40px;
+    }
+    .copy-container span {
+        font-size: 12vw;
+    }
+    .section-title {
+        font-size: 24px;
+        margin-bottom: 30px;
+    }
+    .contents-item {
+        width: 150px;
+    }
+    .contents-item img {
+        height: 120px;
+    }
 }
