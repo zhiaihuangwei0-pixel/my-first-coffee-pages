@@ -15,6 +15,7 @@ li{
     color: black;
     height: 90px;
     width: 100%;
+    overflow-x: auto;     /* 横方向にはみ出した場合、スクロールできるようにする */
 }
 .header-logo{
     float:left;
@@ -31,6 +32,7 @@ li{
     float:left;
     padding: 33px 40px;
     flex-direction: row;
+    overflow-x: auto;     /* 横方向にはみ出した場合、スクロールできるようにする */
 }
 
 .header-list a{
@@ -38,6 +40,7 @@ li{
     font-size: 20px;
     text-decoration: none;
     flex-direction: row;
+    overflow-x: auto;     /* 横方向にはみ出した場合、スクロールできるようにする */
 }
 
 .main{
@@ -126,6 +129,7 @@ li{
     float: right;
     font-size: 20px;
     padding: 0px 20px;
+    overflow-x: auto;     /* 横方向にはみ出した場合、スクロールできるようにする */
 }
 .footer-list a{
     padding: 33px 20px;
@@ -151,7 +155,7 @@ li{
         font-size: 8vw;
     }
     .copy-container h2 {
-        font-size: 40px;
+        font-size: 5vw;
     }
     .copy-container span {
         font-size: 12vw;
