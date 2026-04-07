@@ -13,7 +13,7 @@ body{
     margin: 0;
     padding: 0;
     font-family: 'Courier New', Courier, monospace, "Hiragino Kaku Gothic ProN", "メイリオ", sans-serif;
-    min-height: 100vh;
+    min-height: 100%;
     overflow-x: hidden; /* 画面からはみ出した要素を強制的に隠す */
 }
 body::before{
