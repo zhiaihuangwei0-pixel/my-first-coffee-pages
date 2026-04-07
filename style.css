@@ -11,7 +11,7 @@ html {
 
 body{
     font-family: 'Courier New', Courier, monospace, "Hiragino Kaku Gothic ProN", "メイリオ", sans-serif;
-    min-width: 100%;
+    min-width: 100vh;
     overflow-x: hidden; /* 画面からはみ出した要素を強制的に隠す */
     margin: 0;
     padding: 0;
@@ -23,9 +23,6 @@ body{
     /* 画像の上に 40% くらいの黒を重ねる設定 */
     background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), 
     url("world.png") no-repeat center / cover fixed;
-
-    background-size: cover;
-    background-attachment: fixed;
 }
 
 li{
