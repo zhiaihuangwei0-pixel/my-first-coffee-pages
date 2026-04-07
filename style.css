@@ -10,19 +10,23 @@ html {
 }
 
 body{
-    font-family: 'Courier New', Courier, monospace, "Hiragino Kaku Gothic ProN", "メイリオ", sans-serif;
-    min-width: 100vh;
-    overflow-x: hidden; /* 画面からはみ出した要素を強制的に隠す */
     margin: 0;
     padding: 0;
-    /* --- 壁紙の設定 --- */
-    background-size: cover;                /* 画面いっぱいに広げる */
-    background-position: center;           /* 中央合わせ */
-    background-attachment: fixed;          /* スクロールしても背景を動かさない（繋がって見えるコツ） */
-    background-repeat: no-repeat;
-    /* 画像の上に 40% くらいの黒を重ねる設定 */
+    font-family: 'Courier New', Courier, monospace, "Hiragino Kaku Gothic ProN", "メイリオ", sans-serif;
+    min-height: 100vh;
+    overflow-x: hidden; /* 画面からはみ出した要素を強制的に隠す */
+}
+body::before{
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
     background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), 
-    url("world.png") no-repeat center / cover fixed;
+                url("../world.png") no-repeat center / cover;
+
 }
 
 li{
@@ -311,20 +315,20 @@ li{
         gap: 15px;
         margin: 0;
         padding: 0 10px;
-        
+
         /* 横スクロールの核心部分 */
         overflow-x: auto;      /* はみ出したらスクロール */
         white-space: nowrap;   /* ★これが重要！中身を絶対に改行させない */
         flex: 1;               /* 余ったスペースをリストが使う */
         justify-content: flex-end; /* 右側に寄せる */
-        
+
         -webkit-overflow-scrolling: touch;
-        scrollbar-width: none; 
+        scrollbar-width: none;
     }
 
     /* li要素が勝手に改行されないように固定 */
     .footer-list li {
-        display: inline-block; 
+        display: inline-block;
         flex-shrink: 0;        /* 項目が縮まないようにする */
         padding: 0;
     }
