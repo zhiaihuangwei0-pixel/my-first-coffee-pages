@@ -21,8 +21,9 @@ body{
     background-attachment: fixed;          /* スクロールしても背景を動かさない（繋がって見えるコツ） */
     background-repeat: no-repeat;
     /* 画像の上に 40% くらいの黒を重ねる設定 */
-    background: linear-gradient(rgba(212, 202, 185, 0.007), rgba(179, 141, 85, 0.137)),
-                img(world.png);
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), 
+    url("world.png") no-repeat center / cover fixed;
+
     background-size: cover;
     background-attachment: fixed;
 }
