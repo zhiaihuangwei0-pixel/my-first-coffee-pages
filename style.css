@@ -255,6 +255,15 @@ li{
 
         -webkit-overflow-scrolling: touch;
         scrollbar-width: none;
+             /* 中央や右寄せを解除し、必ず左端から表示させる */
+        justify-content: flex-start !important; 
+        
+        /* 左側に少し余白が欲しい場合は padding を使う */
+        padding-left: 20px;
+        
+        /* はみ出した時のスクロールを保証 */
+        overflow-x: auto;
+        white-space: nowrap;
     }
 
     /* li要素が勝手に改行されないように固定 */
@@ -323,7 +332,15 @@ li{
         justify-content: flex-end; /* 右側に寄せる */
 
         -webkit-overflow-scrolling: touch;
-        scrollbar-width: none;
+        scrollbar-width: none;     /* 中央や右寄せを解除し、必ず左端から表示させる */
+        justify-content: flex-end !important; 
+        
+        /* 左側に少し余白が欲しい場合は padding を使う */
+        padding-left: 20px;
+        
+        /* はみ出した時のスクロールを保証 */
+        overflow-x: auto;
+        white-space: nowrap;
     }
 
     /* li要素が勝手に改行されないように固定 */
@@ -337,17 +354,5 @@ li{
         font-size: 14px;
         padding: 5px 10px;
         display: block;        /* クリック領域を確保 */
-    }
-
-    .header-list, .footer-list {
-        /* 中央や右寄せを解除し、必ず左端から表示させる */
-        justify-content: flex-start !important; 
-        
-        /* 左側に少し余白が欲しい場合は padding を使う */
-        padding-left: 20px;
-        
-        /* はみ出した時のスクロールを保証 */
-        overflow-x: auto;
-        white-space: nowrap;
     }
 }
